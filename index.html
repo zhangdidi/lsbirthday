@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <title>生日快乐</title>
+	    <!-- Link Swiper's CSS -->
+  		<link rel="stylesheet" href="css/swiper.min.css">
+  		<link rel="stylesheet" href="css/animateSwiper.css">
+  		<link rel="stylesheet" href="css/index.css">
+    <style>
+		
+
+	  </style>
+	</head>
+	<body>
+   <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+				<div class="box ani" swiper-animate-effect="rollIn" swiper-animate-duration="2s">
+					<div class="name">生日快乐！</div>
+					<div class="content ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="2s" swiper-animate-delay="1s">
+						<img class="people" src="img/people.jpg">
+						如果人生的风景有无数，愿幸福高居生活的榜首；
+					</div> 
+
+				</div>
+            </div>
+            <div class="swiper-slide">
+				<div class="box ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s">
+					<div class="name">生日快乐！</div>
+					<div class="content ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="2s" swiper-animate-delay="1s">
+						<img class="people" src="img/4.jpg">
+						如果情感的历程长而久，愿快乐领跑在最前头！
+						
+					</div>
+				</div>
+            </div>
+            <div class="swiper-slide">
+            	<div class="box ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="2s">
+					<div class="name">生日快乐！</div>
+					<div class="content ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+						<img class="people" src="img/3.jpg">
+						天涯海角，总有一份思念属于你。四面八方，总有一丝牵挂缠绕你。不管你身在何方，我都送上最美的祝福。
+					</div>
+				</div>
+            </div>
+            <div class="swiper-slide">
+				<div class="box ani" swiper-animate-effect="rollIn" swiper-animate-duration="2s">
+					<div class="name">生日快乐！</div>
+					<div class="content ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="1s" swiper-animate-delay="1s">
+						<img class="people" src="img/2.jpg">
+						闯进你的生活，只是为了给你上一课
+					</div>
+				</div>
+            </div>
+            <div class="swiper-slide">
+				<div class="box ani" swiper-animate-effect="rollIn" swiper-animate-duration="2s">
+					<div class="name">有时候</div>
+					<div class="content ani" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="1s" swiper-animate-delay="1s">
+						<img class="people" src="img/1.jpg">
+						没有下一次，没有机会重来，没有暂停继续。有时候错过了现在，就永远没有机会了
+					</div>
+
+				</div>
+
+            </div>
+        </div>
+        <!-- <div class="swiper-pagination"></div>  -->
+    </div>
+
+    <!-- arrow -->
+    <img class="arrow" src="img/arrow.png">
+	<!-- 音频 -->
+    <audio id="videoMusic" autoplay="autoplay" controls="controls" loop="loop">
+	  <source src="video/a.mp3" type="audio/mp3" />
+		你的浏览器不支持audio标签。
+	</audio> 
+	<!-- 音频end -->
+    <div class="video btn-audio rotateclass">
+		<img src="img/music.png" width="50" height="50" id="music_btn01" border="0">
+    </div>
+
+<script src="js/jquery.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
+<script>
+ 
+    $(document).ready(function(){ 
+		// new WOW().init();
+
+	   var swiper = new Swiper('.swiper-container',{
+	   		on:{
+	   			init: function(){
+	        		swiperAnimateCache(this); //隐藏动画元素 
+		        	swiperAnimate(this); //初始化完成开始动画
+			    }, 
+			    slideChangeTransitionEnd: function(){ 
+			        swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+			        //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+			    } 
+	   		},
+	   		// loop : true,
+			direction : 'vertical',
+
+			followFinger : false,
+			mousewheel: true,
+
+	    });
+
+        //播放器控制
+        var audio = document.getElementById('videoMusic');
+
+        $('#music_btn01').click(function() {
+
+            event.stopPropagation();//防止冒泡
+
+            if(audio.paused){ //如果当前是暂停状态
+                $('.btn-audio').addClass('rotateclass');
+                audio.play(); //播放
+            }else{
+                //当前是播放状态
+                $('.btn-audio').removeClass('rotateclass');
+                audio.pause(); //暂停''
+            }
+        });
+
+       var u = navigator.userAgent;
+		if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {//安卓手机
+			console.log(audio);
+			// audio.play()
+			
+			} else if (u.indexOf('iPhone') > -1) {//苹果手机
+
+				// document.getElementById('mp3Btn').play();
+
+				document.addEventListener("WeixinJSBridgeReady", function () { 
+
+			        document.getElementById('videoMusic').play(); 
+
+			    }, false);
+			 
+			} 
+	    });
+
+ 
+	
+
+
+ 	
+</script>
+	</body>
+</html>
