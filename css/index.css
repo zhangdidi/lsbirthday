@@ -34,6 +34,7 @@ html,body{
 		        align-items: center;
 		        position: relative;
 		    }
+
 			.swiper-slide:nth-child(1){
 		     	background: url('../img/2.jpeg');
 		        background-size: cover;
@@ -44,7 +45,7 @@ html,body{
 			}
 			.swiper-slide:nth-child(3){
 				background: url('../img/3.jpg');
-		        background-size: cover;
+		        background-size: cover; 
 			}
 			.swiper-slide:nth-child(4){
 				background: url('../img/4.jpg');
@@ -206,7 +207,7 @@ html,body{
 			.box{
 				width: 80%;
 				position: absolute;
-				top: 15%;
+				top: 10%;
 				background-color: #fff;
 				font-size: 18px;
 				padding: 10px;
@@ -229,5 +230,9 @@ html,body{
 			}
 
 			.people{
+				width: 100%;
+			}
+			.imgs{
+				max-height: 330px;
 				width: 100%;
 			}
