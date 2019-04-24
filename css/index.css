@@ -36,23 +36,23 @@ html,body{
 		    }
 
 			.swiper-slide:nth-child(1){
-		     	background: url('../img/2.jpeg');
+		     	background: url('http://pqgmhmrr5.bkt.clouddn.com/2.jpeg');
 		        background-size: cover;
 			}
 			.swiper-slide:nth-child(2){
-				background: url('../img/2.jpg');
+				background: url('http://pqgmhmrr5.bkt.clouddn.com/2.jpg');
 		        background-size: cover;
 			}
 			.swiper-slide:nth-child(3){
-				background: url('../img/3.jpg');
+				background: url('http://pqgmhmrr5.bkt.clouddn.com/3.jpg');
 		        background-size: cover; 
 			}
 			.swiper-slide:nth-child(4){
-				background: url('../img/4.jpg');
+				background: url('http://pqgmhmrr5.bkt.clouddn.com/4.jpg');
 		        background-size: cover;
 			}
 			.swiper-slide:nth-child(5){
-				background: url('../img/5.jpg');
+				background: url('http://pqgmhmrr5.bkt.clouddn.com/5.jpg');
 		        background-size: cover;
 
 			}
