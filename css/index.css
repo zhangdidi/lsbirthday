@@ -36,23 +36,23 @@ html,body{
 		    }
 
 			.swiper-slide:nth-child(1){
-		     	background: url('http://pqgmhmrr5.bkt.clouddn.com/2.jpeg');
+		     	background: url('http://pqgmhmrr5.bkt.clouddn.com/520/bg-5.png');
 		        background-size: cover;
 			}
 			.swiper-slide:nth-child(2){
-				background: url('http://pqgmhmrr5.bkt.clouddn.com/2.jpg');
+				background: url('http://pqgmhmrr5.bkt.clouddn.com/520/bg-5.png');
 		        background-size: cover;
 			}
 			.swiper-slide:nth-child(3){
-				background: url('http://pqgmhmrr5.bkt.clouddn.com/3.jpg');
+				background: url('http://pqgmhmrr5.bkt.clouddn.com/520/bg-5.png');
 		        background-size: cover; 
 			}
 			.swiper-slide:nth-child(4){
-				background: url('http://pqgmhmrr5.bkt.clouddn.com/4.jpg');
+				background: url('http://pqgmhmrr5.bkt.clouddn.com/520/bg-5.png');
 		        background-size: cover;
 			}
 			.swiper-slide:nth-child(5){
-				background: url('http://pqgmhmrr5.bkt.clouddn.com/5.jpg');
+				background: url('http://pqgmhmrr5.bkt.clouddn.com/520/bg-5.png');
 		        background-size: cover;
 
 			}
@@ -207,7 +207,7 @@ html,body{
 			.box{
 				width: 80%;
 				position: absolute;
-				top: 10%;
+				top: 15%;
 				background-color: #fff;
 				font-size: 18px;
 				padding: 10px;
